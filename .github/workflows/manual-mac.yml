@@ -33,7 +33,7 @@ jobs:
           echo test-$RANDOM > /tmp/output-file
 
       - uses: hkusu/s3-upload-action@v2
-        id: upload # specify some ID for use in subsequent steps
+        id: upload-test # specify some ID for use in subsequent steps
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY}}
