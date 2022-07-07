@@ -35,9 +35,9 @@ jobs:
 
       - name: make Seamly2D for macos
         run: |
-          xcode-select -s /Applications/Xcode_10.3.app/
+          sudo xcode-select -s /Applications/Xcode_10.3.app/
           # Show MacOSX SDK Path
-          xcrun -sdk macosx --show-sdk-path
+          sudo xcrun -sdk macosx --show-sdk-path
           qmake Seamly2D.pro -r CONFIG+=no_ccache CONFIG+=noDebugSymbols
           make -j4
 
