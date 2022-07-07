@@ -30,7 +30,8 @@ jobs:
 
       - name: test-s3-upload
         run: |
-        echo test-$RANDOM > /tmp/output-file
+          echo test-$RANDOM > /tmp/output-file
+
       - uses: hkusu/s3-upload-action@v2
         id: upload # specify some ID for use in subsequent steps
         with:
